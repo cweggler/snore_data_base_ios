@@ -185,6 +185,18 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkI-tN-eWR">
                                         <rect key="frame" x="170.5" y="212" width="34" height="391"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="hiz-gl-AKx" eventType="touchUpInside" id="Z5Z-uW-oSf"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e7-gG-KdQ">
+                                        <rect key="frame" x="111" y="603" width="153" height="0.0"/>
+                                        <state key="normal" title="Delete Family Member">
+                                            <color key="titleColor" red="0.75050018490000003" green="0.2468048102" blue="0.30877752829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteFamilyMember:" destination="hiz-gl-AKx" eventType="touchUpInside" id="wdX-Qk-2nl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,6 +210,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YUm-mN-v4J"/>
                     </view>
+                    <connections>
+                        <outlet property="ageText" destination="wHO-QW-gxW" id="M5f-W0-kMb"/>
+                        <outlet property="deleteButton" destination="4e7-gG-KdQ" id="FlJ-qC-e1a"/>
+                        <outlet property="nameText" destination="6KN-pR-JBl" id="tyk-Du-QxA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fq-PU-bmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,6 +269,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Lo-PO-suF"/>
+        <segue reference="QPI-1v-Bqc"/>
     </inferredMetricsTieBreakers>
 </document>

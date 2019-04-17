@@ -8,8 +8,14 @@
 
 
 import UIKit
+import CoreData
 
-class SleepRecordViewController: UITableViewController {
+class SleepRecordViewController: UITableViewController, NSFetchedResultsController, SleepRecordDelegate {
+    
+    var familyMember: FamilyMember?
+    var managedContext: NSManagedObjectContext?
+    var fetchedSleepRecordsController: NSFetchedResultsController<SleepRecord>?
+    var sleepRecords: [SleepRecord] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
